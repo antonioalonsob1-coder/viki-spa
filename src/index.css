@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-charcoal font-body antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display text-emerald;
+  }
+
+  :focus-visible {
+    outline: 2px solid #C7A445;
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: #C7A445;
+    color: #0B3D2E;
+  }
+}
+
+@layer utilities {
+  .eyebrow {
+    @apply font-body text-xs uppercase tracking-[0.28em] text-gold-deep font-semibold;
+  }
+
+  /* Signature: stitched swatch card, evoking a fabric sample pinned with a gold thread */
+  .swatch-card {
+    position: relative;
+    border-radius: 2px;
+    background: #FFFFFF;
+    box-shadow: 0 1px 2px rgba(11, 61, 46, 0.06);
+  }
+
+  .swatch-card::before {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border: 1.5px dashed rgba(199, 164, 69, 0.55);
+    pointer-events: none;
+    border-radius: 1px;
+  }
+
+  .thread-divider {
+    height: 1px;
+    background-image: repeating-linear-gradient(90deg, #C7A445 0, #C7A445 5px, transparent 5px, transparent 11px);
+  }
+
+  .container-viki {
+    @apply mx-auto w-full max-w-[1200px] px-6 sm:px-8 lg:px-10;
+  }
+
+  .reveal {
+    animation: fadeUp 0.7s ease-out both;
+  }
+
+  .viki-input {
+    @apply w-full rounded-sm border border-emerald/20 bg-cream px-3.5 py-2.5 text-[14px] text-charcoal placeholder:text-charcoal/35 transition-colors;
+  }
+  .viki-input:focus {
+    @apply border-gold outline-none ring-1 ring-gold/40;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

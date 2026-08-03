@@ -1,0 +1,8 @@
+# Configuración para Cloudflare Pages
+# Deploy manual: npx wrangler pages deploy dist --project-name=viki-spa
+# Deploy continuo: conectar el repo de GitHub en el dashboard de Cloudflare Pages
+# usando Build command "npm run build" y Build output directory "dist".
+
+name = "viki-spa"
+pages_build_output_dir = "dist"
+compatibility_date = "2025-01-01"

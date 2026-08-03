@@ -1,0 +1,15 @@
+# Configuración para Render — Static Site
+# https://render.com/docs/static-sites
+# Importar este repo en Render y seleccionar "Blueprint" detecta este archivo automáticamente.
+
+services:
+  - type: web
+    name: viki-spa
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    pullRequestPreviewsEnabled: true
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
