@@ -56,6 +56,14 @@ export default function QuoteForm() {
       lineas.push('', `*Detalle:* ${form.mensaje.trim()}`)
     }
 
+    fetch('/api/cotizaciones', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form),
+    }).catch(() => {
+      // no bloquea el envío por WhatsApp si la API falla
+    })
+
     window.open(waLink(lineas.join('\n'), contacto.whatsappNumber), '_blank', 'noreferrer')
     setEnviado(true)
   }

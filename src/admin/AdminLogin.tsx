@@ -2,13 +2,13 @@ import { useState, type FormEvent } from 'react'
 import { Lock } from 'lucide-react'
 import Logo from '../components/Logo'
 
-export default function AdminLogin({ onLogin }: { onLogin: (password: string) => boolean }) {
+export default function AdminLogin({ onLogin }: { onLogin: (password: string) => Promise<boolean> }) {
   const [password, setPassword] = useState('')
   const [error, setError] = useState(false)
 
-  function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault()
-    const ok = onLogin(password)
+    const ok = await onLogin(password)
     setError(!ok)
   }
 

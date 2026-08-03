@@ -6,3 +6,13 @@
 name = "viki-spa"
 pages_build_output_dir = "dist"
 compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "viki-spa-db"
+database_id = "bc5b1974-8425-4d31-abc0-4a0acc99f8a0"
+
+[[r2_buckets]]
+binding = "GALERIA_BUCKET"
+bucket_name = "viki-spa-galeria"

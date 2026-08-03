@@ -1,12 +1,12 @@
 import { useRef, useState } from 'react'
 import { Trash2, Upload } from 'lucide-react'
-import { useLocalGallery } from '../../hooks/useLocalGallery'
+import { useGallery } from '../../hooks/useGallery'
 import type { CategoriaGaleria } from '../../data/galeriaSeed'
 
 const CATEGORIAS: CategoriaGaleria[] = ['Hogar & Cortinaje', 'Licenciaturas & Colegios']
 
 export default function GaleriaEditor() {
-  const { fotos, agregarFotos, eliminarFoto } = useLocalGallery()
+  const { fotos, agregarFotos, eliminarFoto } = useGallery()
   const [categoriaSubida, setCategoriaSubida] = useState<CategoriaGaleria>('Hogar & Cortinaje')
   const [arrastrando, setArrastrando] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)

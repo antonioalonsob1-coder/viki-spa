@@ -1,12 +1,12 @@
 import { useState } from 'react'
-import { useLocalGallery } from '../hooks/useLocalGallery'
+import { useGallery } from '../hooks/useGallery'
 import type { CategoriaGaleria } from '../data/galeriaSeed'
 
 type Filtro = CategoriaGaleria | 'Todos'
 const FILTROS: Filtro[] = ['Todos', 'Hogar & Cortinaje', 'Licenciaturas & Colegios']
 
 export default function Gallery() {
-  const { fotos } = useLocalGallery()
+  const { fotos } = useGallery()
   const [filtro, setFiltro] = useState<Filtro>('Todos')
 
   const visibles = filtro === 'Todos' ? fotos : fotos.filter((f) => f.categoria === filtro)

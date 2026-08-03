@@ -6,4 +6,6 @@ dist
 .DS_Store
 .vscode
 .claude
+.wrangler
+.dev.vars
 Gemini_Generated_Image_hjukvhhjukvhhjuk.png

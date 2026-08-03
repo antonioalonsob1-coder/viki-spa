@@ -1,38 +1,32 @@
-import { useState } from 'react'
-import { createLocalStoreHook } from './useContentStore'
-
-const SESSION_KEY = 'viki-admin-session'
-
-export const useAdminPassword = createLocalStoreHook<string>('viki-admin-password', 'vikispa2026')
-
-function leerSesion(): boolean {
-  try {
-    return sessionStorage.getItem(SESSION_KEY) === 'true'
-  } catch {
-    return false
-  }
-}
+import { useEffect, useState } from 'react'
 
 export function useAdminAuth() {
-  const [password] = useAdminPassword()
-  const [authed, setAuthed] = useState(leerSesion)
+  const [authed, setAuthed] = useState<boolean | null>(null)
 
-  function login(intento: string): boolean {
-    const ok = intento === password
-    if (ok) {
-      try {
-        sessionStorage.setItem(SESSION_KEY, 'true')
-      } catch {
-        // sessionStorage no disponible: la sesión no persiste al recargar, pero el login igual funciona.
-      }
-      setAuthed(true)
+  useEffect(() => {
+    fetch('/api/admin/session')
+      .then((r) => r.json())
+      .then((d) => setAuthed(Boolean(d.authed)))
+      .catch(() => setAuthed(false))
+  }, [])
+
+  async function login(intento: string): Promise<boolean> {
+    try {
+      const res = await fetch('/api/admin/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password: intento }),
+      })
+      if (res.ok) setAuthed(true)
+      return res.ok
+    } catch {
+      return false
     }
-    return ok
   }
 
-  function logout() {
+  async function logout() {
     try {
-      sessionStorage.removeItem(SESSION_KEY)
+      await fetch('/api/admin/logout', { method: 'POST' })
     } catch {
       // no-op
     }

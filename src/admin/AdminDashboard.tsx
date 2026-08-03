@@ -1,11 +1,12 @@
 import { useState } from 'react'
-import { ExternalLink, Images, LogOut, MessageSquareQuote, Settings, Shirt, UserRound } from 'lucide-react'
+import { ClipboardList, ExternalLink, Images, LogOut, MessageSquareQuote, Settings, Shirt, UserRound } from 'lucide-react'
 import Logo from '../components/Logo'
 import { useContacto } from '../hooks/useSiteContent'
 import ContactoEditor from './sections/ContactoEditor'
 import TelasEditor from './sections/TelasEditor'
 import GaleriaEditor from './sections/GaleriaEditor'
 import TestimoniosEditor from './sections/TestimoniosEditor'
+import CotizacionesEditor from './sections/CotizacionesEditor'
 import AjustesEditor from './sections/AjustesEditor'
 
 const TABS = [
@@ -13,6 +14,7 @@ const TABS = [
   { id: 'telas', label: 'Muestrario de Telas', icon: Shirt, Component: TelasEditor },
   { id: 'galeria', label: 'Galería', icon: Images, Component: GaleriaEditor },
   { id: 'testimonios', label: 'Testimonios', icon: MessageSquareQuote, Component: TestimoniosEditor },
+  { id: 'cotizaciones', label: 'Cotizaciones', icon: ClipboardList, Component: CotizacionesEditor },
   { id: 'ajustes', label: 'Ajustes', icon: Settings, Component: AjustesEditor },
 ] as const
 
