@@ -70,9 +70,9 @@ export default function Navbar() {
             href={waLink(`Hola ${contacto.nombre}, me gustaría cotizar un proyecto.`, contacto.whatsappNumber)}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-sm bg-emerald px-5 py-2.5 text-[13.5px] font-semibold text-cream transition-colors hover:bg-emerald-deep"
+            className="inline-flex items-center gap-1.5 rounded-sm bg-emerald px-3.5 py-1.5 text-[12.5px] font-semibold text-cream transition-colors hover:bg-emerald-deep"
           >
-            <MessageCircle size={16} className="text-gold" />
+            <MessageCircle size={14} className="text-gold" />
             Cotizar por WhatsApp
           </a>
         </div>
