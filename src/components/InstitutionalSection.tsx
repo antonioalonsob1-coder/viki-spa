@@ -1,4 +1,4 @@
-import { Download, Eye, GraduationCap, PartyPopper, Tent } from 'lucide-react'
+import { Flag, GraduationCap, PartyPopper } from 'lucide-react'
 import { waLink } from '../data/config'
 import { useContacto } from '../hooks/useSiteContent'
 
@@ -16,14 +16,12 @@ const BLOQUES = [
     items: ['Fundas de sillas por generación', 'Cubre-mesas y manteles institucionales', 'Telones de fondo de escenario'],
   },
   {
-    icon: Tent,
-    titulo: 'Montajes y Estructuras',
-    descripcion: 'Instalación completa del espacio de la ceremonia, dentro o fuera del establecimiento.',
-    items: ['Encarpados y toldos', 'Decoración de escenarios', 'Pasarelas para desfile de honor'],
+    icon: Flag,
+    titulo: 'Confección de Grandes Formatos',
+    descripcion: 'Piezas textiles de gran tamaño, confeccionadas en nuestro taller para vestir cada rincón de la ceremonia.',
+    items: ['Cortinaje escénico de gran formato', 'Banderines y estandartes de generación', 'Alfombras y pasarelas textiles'],
   },
 ]
-
-const DOSSIER_HREF = '/dossier-licenciaturas-2026.pdf'
 
 export default function InstitutionalSection() {
   const [contacto] = useContacto()
@@ -31,46 +29,17 @@ export default function InstitutionalSection() {
   return (
     <section id="licenciaturas" className="scroll-mt-[72px] bg-emerald py-24 text-cream">
       <div className="container-viki">
-        <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
-          <div className="max-w-xl">
-            <p className="font-body text-xs uppercase tracking-[0.28em] text-gold font-semibold">
-              Colegios y Liceos
-            </p>
-            <h2 className="mt-4 font-display text-3xl text-cream sm:text-4xl">
-              Decoración Institucional y Licenciaturas
-            </h2>
-            <p className="mt-4 text-[15px] leading-relaxed text-cream/75">
-              Coordinamos con centros de padres y colegios cada ceremonia de graduación, de la
-              medida de la túnica al último metro del telón de fondo.
-            </p>
-          </div>
-
-          <div className="swatch-card shrink-0 bg-cream/95 p-6 md:w-[300px]">
-            <p className="eyebrow mb-2 text-gold-deep">Descarga</p>
-            <h3 className="font-display text-lg text-emerald">Dossier de Licenciaturas 2026</h3>
-            <p className="mt-2 text-[13px] leading-relaxed text-charcoal/70">
-              Catálogo completo de túnicas, estolas y paquetes de montaje con precios referenciales.
-            </p>
-            <div className="mt-4 flex flex-col gap-2">
-              <a
-                href={DOSSIER_HREF}
-                download
-                className="inline-flex items-center justify-center gap-2 rounded-sm bg-emerald px-4 py-2.5 text-[13px] font-semibold text-cream transition-colors hover:bg-emerald-deep"
-              >
-                <Download size={15} className="text-gold" />
-                Descargar PDF
-              </a>
-              <a
-                href={DOSSIER_HREF}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-sm border border-emerald/25 px-4 py-2.5 text-[13px] font-semibold text-emerald transition-colors hover:bg-emerald/5"
-              >
-                <Eye size={15} />
-                Ver en línea
-              </a>
-            </div>
-          </div>
+        <div className="max-w-xl">
+          <p className="font-body text-xs uppercase tracking-[0.28em] text-gold font-semibold">
+            Colegios y Liceos
+          </p>
+          <h2 className="mt-4 font-display text-3xl text-cream sm:text-4xl">
+            Decoración Institucional y Licenciaturas
+          </h2>
+          <p className="mt-4 text-[15px] leading-relaxed text-cream/75">
+            Coordinamos con centros de padres y colegios cada ceremonia de graduación, de la
+            medida de la túnica al último metro del telón de fondo.
+          </p>
         </div>
 
         <div className="mt-14 grid gap-6 md:grid-cols-3">
