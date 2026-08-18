@@ -19,8 +19,8 @@ const SERVICIOS = [
     icon: Layers,
     titulo: 'Textilería Integral para el Hogar',
     descripcion:
-      'El detalle final de la decoración: cojines, pieceras y tapicería que unifican la paleta textil de cada espacio.',
-    items: ['Cojines y fundas decorativas', 'Pieceras y cubrecamas', 'Tapicería de sillones y cabeceras'],
+      'El detalle final de la decoración: cojines, pieceras y fundas que unifican la paleta textil de cada espacio.',
+    items: ['Cojines y fundas decorativas', 'Pieceras y cubrecamas', 'Fundas y protectores para muebles a medida'],
   },
 ]
 

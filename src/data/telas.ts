@@ -22,8 +22,8 @@ export const telas: Tela[] = [
     id: 'velvet',
     nombre: 'Terciopelo / Velvet',
     categoria: 'Hogar',
-    descripcion: 'Tacto profundo y brillo cambiante según la luz. Ideal para tapicería y piezas de alto impacto.',
-    usos: ['Fundas de sillas', 'Tapicería', 'Cabeceras'],
+    descripcion: 'Tacto profundo y brillo cambiante según la luz. Ideal para cojines y fundas de alto impacto.',
+    usos: ['Fundas de sillas', 'Cojines decorativos', 'Cortinas de living'],
     swatch: 'linear-gradient(135deg,#0B3D2E,#155C45 45%,#0B3D2E)',
   },
   {

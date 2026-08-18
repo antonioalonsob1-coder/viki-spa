@@ -14,8 +14,8 @@ INSERT OR IGNORE INTO telas (id, nombre, categoria, descripcion, usos, swatch) V
    '["Visillos","Cortinas de living","Cojines"]',
    'repeating-linear-gradient(45deg,#EDE4CE 0 2px,#E4D8B9 2px 4px)'),
   ('velvet', 'Terciopelo / Velvet', 'Hogar',
-   'Tacto profundo y brillo cambiante según la luz. Ideal para tapicería y piezas de alto impacto.',
-   '["Fundas de sillas","Tapicería","Cabeceras"]',
+   'Tacto profundo y brillo cambiante según la luz. Ideal para cojines y fundas de alto impacto.',
+   '["Fundas de sillas","Cojines decorativos","Cortinas de living"]',
    'linear-gradient(135deg,#0B3D2E,#155C45 45%,#0B3D2E)'),
   ('blackout', 'Blackout Térmico', 'Hogar',
    'Bloqueo total de luz y aislación térmica. La solución técnica para dormitorios y home cinema.',
@@ -53,7 +53,7 @@ INSERT OR IGNORE INTO testimonios (id, nombre, rol, texto, estrellas) VALUES
    'Montaron el telón de fondo y las fundas de sillas para la licenciatura de 400 alumnos. Todo coordinado y armado antes de lo previsto.',
    5),
   ('t4', 'Paula Contreras', 'Cliente residencial, La Reina',
-   'La tapicería a medida de nuestro living en velvet superó lo que imaginábamos. Muy buena disposición para ajustar detalles en terreno.',
+   'Las fundas de sillón y los cojines a medida en velvet superaron lo que imaginábamos. Muy buena disposición para ajustar detalles en terreno.',
    4);
 
 -- Hash PBKDF2-HMAC-SHA256 (100.000 iteraciones, salt 16 bytes, clave derivada 32 bytes, hex)

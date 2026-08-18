@@ -40,8 +40,8 @@ export default function Hero() {
           </h1>
           <p className="mt-6 max-w-md text-[15.5px] leading-relaxed text-charcoal/75">
             Diseño y confección a medida para el hogar y para los grandes hitos institucionales:
-            cortinaje, tapicería, túnicas de graduación y montajes de escenario, hechos en nuestro
-            propio taller.
+            cortinaje, cojines, túnicas de graduación y confección de grandes formatos, hechos en
+            nuestro propio taller.
           </p>
 
           <div className="mt-9 flex flex-col gap-3.5 sm:flex-row">

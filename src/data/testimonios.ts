@@ -32,7 +32,7 @@ export const testimonios: Testimonio[] = [
     id: 't4',
     nombre: 'Paula Contreras',
     rol: 'Cliente residencial, La Reina',
-    texto: 'La tapicería a medida de nuestro living en velvet superó lo que imaginábamos. Muy buena disposición para ajustar detalles en terreno.',
+    texto: 'Las fundas de sillón y los cojines a medida en velvet superaron lo que imaginábamos. Muy buena disposición para ajustar detalles en terreno.',
     estrellas: 4,
   },
 ]
